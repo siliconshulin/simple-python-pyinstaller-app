@@ -1,18 +1,20 @@
 import unittest
 import calc
+import pytest
 
 class TestCalc(unittest.TestCase):
     """
     Test the add function from the calc library
     """
-
+    @pytest.mark.hello
     def test_add_integers(self):
         """
         Test that the addition of two integers returns the correct total
         """
         result = calc.add2(1, 2)
         self.assertEqual(result, 3)
-
+        
+    @pytest.mark.hello
     def test_add_floats(self):
         """
         Test that the addition of two floats returns the correct result
