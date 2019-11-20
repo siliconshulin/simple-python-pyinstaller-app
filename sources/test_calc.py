@@ -2,6 +2,7 @@ import unittest
 import calc
 import pytest
 
+@pytest.mark.testall
 class TestCalc(unittest.TestCase):
     """
     Test the add function from the calc library
@@ -13,7 +14,8 @@ class TestCalc(unittest.TestCase):
         """
         result = calc.add2(1, 2)
         self.assertEqual(result, 3)
-        
+
+    @pytest.mark.bye
     @pytest.mark.hello
     def test_add_floats(self):
         """
@@ -21,7 +23,7 @@ class TestCalc(unittest.TestCase):
         """
         result = calc.add2('10.5', 2)
         self.assertEqual(result, 12.5)
-
+    @pytest.mark.joy
     def test_add_strings(self):
         """
         Test the addition of two strings returns the two strings as one
